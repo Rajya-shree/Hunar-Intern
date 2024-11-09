@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-learning Online Course Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=YourFontFamily&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="R:\1PROJECT\Hunar internship\EduZone\fontawesome-free-6.6.0-web\css\all.min.css">
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="R:\1PROJECT\Hunar internship\EduZone\Images\EduZone.png" alt="Logo"> <!-- Add your logo image here -->
+                <span>EduZone</span> <!-- Replace with your brand name -->
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#apply">Apply</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <form class="search-box">
+                        <input type="text" placeholder="Search">
+                        <button type="submit">🔍</button>
+                    </form>
+                </li>
+                <li><a href="#login">Login</a></li>
+                <li><button class="signup-button">Sign Up</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="home-content">
+            <h1>Education is the Best Way to Grow up Knowledge</h1>
+            <p>Explore our courses and choose the best fit for you.</p>
+            <button class="cta-button">Start Learning</button>
+        </div>
+        <div class ="home-image-box">
+        <img src="R:\1PROJECT\Hunar internship\EduZone\Images\back 2.png" alt="Illustration" class="home-image">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about-us">
+        <div class="about-box">
+            <div class="about-content">
+                <h2>Over 1000 plus <br> courses in one place</h2>
+                <div class="course-providers">
+                    <img src="duolingo-logo.png" alt="Duolingo">
+                    <img src="udemy-logo.png" alt="Udemy">
+                    <img src="coursera-logo.png" alt="Coursera">
+                    <img src="talentcards-logo.png" alt="TalentCards">
+                    <img src="pluralsight-logo.png" alt="Pluralsight">
+                </div>
+            </div>
+            <div class="rating-section">
+                <div class="stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+                </div>
+                <p>4.5 Star Ratings (20+ Review)</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Trending Categories Section -->
+    <section id="trending-categories">
+        <div class="section-header">
+            <h2>Trending Categories</h2>
+            <button class="browse-all">Browse All</button>
+        </div>
+        <div class="categories-grid">
+            <div class="category-card">
+                <img src="Images/design-icon.png" alt="Design">
+                <h3>Design</h3>
+                <p>50+ Courses</p>
+            </div>
+            <div class="category-card">
+                <img src="Images/management-icon.png" alt="Management">
+                <h3>Management</h3>
+                <p>20+ Courses</p>
+            </div>
+            <div class="category-card">
+                <img src="Images/programming-icon.png" alt="Programming">
+                <h3>Programming</h3>
+                <p>40+ Courses</p>
+            </div>
+            <div class="category-card">
+                <img src="Images/business-icon.png" alt="Business">
+                <h3>Business</h3>
+                <p>10+ Courses</p>
+            </div>
+            <div class="category-card">
+                <img src="Images/audio-music-icon.png" alt="Audio + Music">
+                <h3>Audio + Music</h3>
+                <p>25+ Courses</p>
+            </div>
+            <div class="category-card">
+                <img src="Images/finance-icon.png" alt="Finance">
+                <h3>Finance</h3>
+                <p>6+ Courses</p>
+            </div>
+            <div class="category-card">
+                <img src="Images/accounting-icon.png" alt="Accounting">
+                <h3>Accounting</h3>
+                <p>10+ Courses</p>
+            </div>
+            <div class="category-card">
+                <img src="Images/content-writing-icon.png" alt="Content Writing">
+                <h3>Content Writing</h3>
+                <p>15+ Courses</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Popular Courses Section -->
+    <section class="popular-courses">
+        <div class="section-header">
+            <h2>Our Popular Courses</h2>
+            <button class="sort-button">Sort by Relevance <span>&#9660;</span></button>
+        </div>
+        
+        <div class="courses-grid">
+            <!-- Course Card 1 -->
+            <div class="course-card">
+                <img src="Images/graphic-design.jpg" alt="Graphic Design Course">
+                <div class="course-info">
+                    <span class="badge">Beginner</span>
+                    <span class="price">$200</span>
+                    <h3>Graphic Design Course</h3>
+                    <p><span class="lessons">24 Lessons</span> · <span class="type">Online Class</span></p>
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-value">5.0</span>
+                    </div>
+                </div>
+                <button class="download-button" id="enrollButton">Enroll</button>
+            </div>
+            <div class="course-card">
+                <img src="Images/web-development.jpg" alt="Web Development Course">
+                <div class="course-info">
+                    <span class="badge">Intermediate</span>
+                    <span class="price">$300</span>
+                    <h3>Web Development Course</h3>
+                    <p><span class="lessons">30 Lessons</span> · <span class="type">Online Class</span></p>
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-value">4.9</span>
+                    </div>
+                </div>
+                <button class="download-button">Enroll</button>
+            </div>
+            
+            <div class="course-card">
+                <img src="Images/data-science.jpg" alt="Data Science Course">
+                <div class="course-info">
+                    <span class="badge">Advanced</span>
+                    <span class="price">$400</span>
+                    <h3>Data Science Course</h3>
+                    <p><span class="lessons">40 Lessons</span> · <span class="type">Online Class</span></p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">4.5</span>
+                    </div>
+                </div>
+                <button class="download-button">Enroll</button>
+            </div>
+            
+            <div class="course-card">
+                <img src="Images/digital-marketing.jpg" alt="Digital Marketing Course">
+                <div class="course-info">
+                    <span class="badge">Beginner</span>
+                    <span class="price">$150</span>
+                    <h3>Digital Marketing Course</h3>
+                    <p><span class="lessons">20 Lessons</span> · <span class="type">Online Class</span></p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">4.7</span>
+                    </div>
+                </div>
+                <button class="download-button">Enroll</button>
+            </div>
+            
+            <div class="course-card">
+                <img src="Images/python-programming.jpg" alt="Python Programming Course">
+                <div class="course-info">
+                    <span class="badge">Beginner</span>
+                    <span class="price">$250</span>
+                    <h3>Python Programming Course</h3>
+                    <p><span class="lessons">25 Lessons</span> · <span class="type">Online Class</span></p>
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-value">5.0</span>
+                    </div>
+                </div>
+                <button class="download-button">Enroll</button>
+            </div>
+            
+            <div class="course-card">
+                <img src="Images/project-management.jpg" alt="Project Management Course">
+                <div class="course-info">
+                    <span class="badge">Intermediate</span>
+                    <span class="price">$350</span>
+                    <h3>Project Management Course</h3>
+                    <p><span class="lessons">28 Lessons</span> · <span class="type">Online Class</span></p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">4.8</span>
+                    </div>
+                </div>
+                <button class="download-button">Enroll</button>
+            </div>
+            
+            <div class="course-card">
+                <img src="Images/video-editing.jpg" alt="Video Editing Course">
+                <div class="course-info">
+                    <span class="badge">Beginner</span>
+                    <span class="price">$180</span>
+                    <h3>Video Editing Course</h3>
+                    <p><span class="lessons">22 Lessons</span> · <span class="type">Online Class</span></p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">4.6</span>
+                    </div>
+                </div>
+                <button class="download-button">Enroll</button>
+            </div>
+            
+            <!-- Repeat similar structure for each course card -->
+            
+        </div>
+    </section>
+    
+
+    <!-- Testimonials Section -->
+    <section class="promo-section">
+        <div class="image-container">
+          <img src="Images/mobile1.jpeg" alt="EduZone App Preview" class="app-preview">
+        </div>
+        <div class="text-container">
+          <h1>Ready to Get Information from us</h1>
+          <p>Join and get unlimited offers of the best online courses at an affordable price and start learning on the same day.</p>
+          <div class="app-buttons-container">
+            <button class="download-button">App Store</button>
+            <button class="download-button">Google Play</button>
+          </div>
+        </div>
+      </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+          <!-- Subscription Section -->
+          <div class="footer-section subscribe">
+            <h2>We Listen, You Prosper</h2>
+            <p>Stay up to date with the latest ventures and news</p>
+            <form class="subscribe-form">
+              <input type="email" placeholder="Email address" required>
+              <button type="submit">→</button>
+            </form>
+          </div>
+          
+          <!-- Site Links Section -->
+          <div class="footer-section site-links">
+            <h3>Site</h3>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Invest</a></li>
+              <li><a href="#">Supporters</a></li>
+              <li><a href="#">Become a Partner</a></li>
+            </ul>
+          </div>
+          
+          <!-- Contact Section -->
+          <div class="footer-section contact">
+            <h3>Contact</h3>
+            <p>Email: info@edu-zone.com</p>
+            <p>Phone: 123-456-7890</p>
+            <div class="social-icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="footer-bottom">
+          <p>&copy; 2024 EduZone. All rights reserved.</p>
+        </div>
+      </footer>      
+
+</body>
+</html>
