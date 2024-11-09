@@ -1,0 +1,577 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #141414;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #141414;
+}
+
+.logo {
+    height: 36px;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar nav ul li {
+    margin-left: 20px;
+}
+
+.navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+.language-selector, .sign-in-btn {
+    margin-left: 10px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('home-page.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50px; /* Curved corners */
+    max-width: 80%; /* Limit the width to create empty space on sides */
+    margin: 0 auto; /* Center the section */
+    overflow: hidden; /* Hide overflow to keep the curved edges clean */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for a subtle floating effect */
+}
+
+.hero-content {
+    color: white;
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.input-group {
+    display: flex;
+    margin-top: 20px;
+}
+
+input[type="email"] {
+    padding: 10px;
+    width: 70%;
+    border: none;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #e50914;
+    color: white;
+}
+
+/* Sections styling */
+.trending-now, .only-on-netflix, .plans, .reasons-to-join, .faq {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+}
+
+.carousel-item {
+    min-width: 200px;
+    margin: 10px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+}
+
+/* FAQ */
+.faq-item {
+    margin: 20px 0;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    background-color: #222;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #141414;
+}
+
+.footer-links a {
+    color: #bbb;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Trending Now and Only on Netflix Styles */
+/* Carousel styles */
+.trending-now, .only-on-netflix {
+    padding: 20px;
+    background-color: #141414;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.carousel-track {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+.carousel-item {
+    min-width: 180px;
+    margin: 0 5px;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.carousel-item:hover img {
+    transform: scale(1.05);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left-btn {
+    left: 10px;
+}
+
+.right-btn {
+    right: 10px;
+}
+
+/* Dialog Overlay */
+.dialog-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Dialog Content */
+/* Dialog Overlay */
+.dialog-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Dialog Content */
+.dialog-content {
+    background: #000;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Close Button */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 5px;
+    border-radius: 50%; /* Circular button */
+    z-index: 10;
+}
+
+/* Dialog Image with gradient overlay */
+.dialog-image {
+    height: 200px;
+    background: url('https://picsum.photos/800/450') center/cover no-repeat;
+    position: relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+}
+
+/* Overlay fade effect on image */
+.dialog-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.9));
+}
+
+/* Text content */
+.dialog-text {
+    padding: 20px;
+    background: #111; /* Slightly darker background for text area */
+}
+
+/* Title */
+.dialog-title {
+    font-size: 2.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Info */
+.dialog-info {
+    font-size: 0.9em;
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+/* Description */
+.dialog-description {
+    font-size: 1em;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+/* Get Started Button */
+.get-started-btn {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.reasons {
+    background-color: #000;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.reasons h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.reason-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding:15px 20px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    width: 200px;
+    margin: 10px;
+    text-align: left;
+    position: relative;
+    color: #fff;
+}
+
+.reason-card p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.emoji {
+    font-size: 24px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin-left: 8px;
+}
+
+
+/*FAQ Questions*/
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.accordion {
+    background-color: #1e1e1e;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    margin: 10px 0;
+    width: 65%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    margin-left: 7%;
+    border-radius: 20px;
+}
+
+.active,
+.accordion:hover {
+    background-color: #1e1e1e;
+    border: 1px dashed deepskyblue;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #fff;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0px 18px;
+    background-color: #1e1e1e;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin-left: 21%;
+    width: 65%;
+}
+
+/*Footer*/
+footer{
+	bottom: 0;
+}
+.footer-distributed{
+	background-color: #1e1e1e;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+ 
+	padding: 55px 50px;
+	margin-top: 80px;
+}
+ 
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+ 
+.footer-distributed .footer-left{
+	width: 40%;
+}
+ 
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+ 
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+ 
+ 
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+ 
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+ 
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+ 
+ 
+.footer-distributed .footer-center{
+	width: 35%;
+}
+ 
+.footer-distributed .footer-center i{
+	background-color:  #1e1e1e;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+ 
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+ 
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+ 
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+ 
+.footer-distributed .footer-center p a{
+	color:  #5383d3;
+	text-decoration: none;;
+}
+ 
+.footer-distributed .footer-right{
+	width: 20%;
+}
+ 
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+ 
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+ 
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+ 
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #1e1e1e;
+	border-radius: 2px;
+ 
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+ 
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+ 
+ 
+@media (max-width: 880px) {
+ 
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	
+	}
+ 
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+ 
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+	.main {
+		line-height: normal;
+		font-size: auto;
+	}
+ 
+}
