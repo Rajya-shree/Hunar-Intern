@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Date Voting Form</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Saira', sans-serif;
+            background-color: #FCE4D6;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .form-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #F57C00;
+        }
+
+        .voting-form .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .voting-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .voting-form input, 
+        .voting-form select, 
+        .voting-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .voting-form textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .enroll-button {
+            background: #F57C00;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+        }
+
+        .enroll-button:hover {
+            background: #E65100;
+        }
+        .cheerful-popup {
+            font-family: 'Saira', sans-serif;
+            color: #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <img src="Images/calendar-illustration.png" alt="Calendar Illustration" class="form-image">
+        <h1>Exam Date Voting Form</h1>
+
+        <form action="submit-form.php" method="post" class="voting-form">
+            <!-- Student Name -->
+            <div class="form-group">
+                <label for="first-name">Student Name</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Your Name">
+            </div>
+
+            <!-- Student ID -->
+            <div class="form-group">
+                <label for="student-id">Student ID</label>
+                <input type="text" id="student-id" name="student-id" placeholder="Enter your Student ID">
+            </div>
+
+            <!-- Course -->
+            <div class="form-group">
+                <label for="course">Course</label>
+                <input type="text" id="course" name="course" placeholder="Enter your Course">
+            </div>
+
+            <!-- Institution -->
+            <div class="form-group">
+                <label for="institution">Institution</label>
+                <select id="institution" name="institution">
+                    <option value="" disabled selected>Please Select</option>
+                    <option value="institution1">Institution 1</option>
+                    <option value="institution2">Institution 2</option>
+                    <option value="institution3">Institution 3</option>
+                </select>
+            </div>
+
+            <!-- Date and Time -->
+            <div class="form-group">
+                <label for="date-time">Select Date & Time</label>
+                <input type="datetime-local" id="date-time" name="date-time">
+            </div>
+
+            <!-- Comments and Questions -->
+            <div class="form-group">
+                <label for="comments">Comments & Questions</label>
+                <textarea id="comments" name="comments" placeholder="Enter your comments or questions"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="button" class="download-button enroll-button" id="enrollButton">Enroll</button>
+        </form>
+    </div>
+    
+    <!-- Include SweetAlert2 and confetti scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+document.querySelector('#enrollButton').addEventListener('click', function () {
+    const studentName = document.querySelector('#first-name').value;
+
+    if (studentName) {
+        Swal.fire({
+            title: `🎉 Congratulations, ${studentName}! 🎉`,
+            text: "Move forward on your goal and achieve great things!",
+            icon: "success",
+            showConfirmButton: true,
+            confirmButtonText: "Thank You!",
+            background: "#f9f9f9",
+            customClass: {
+                popup: "cheerful-popup"
+            },
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Redirect back to the index.html course section
+                window.location.href = "index.html#courses";
+            }
+        });
+
+        // Optional: Add a confetti effect
+        setTimeout(() => {
+            confetti({
+                particleCount: 150,
+                spread: 70,
+                origin: { y: 0.6 },
+                zIndex: 9999, // Make sure confetti is on top
+            });
+        }, 300);
+    } else {
+        Swal.fire("Oops!", "Please enter your name to enroll!", "warning");
+    }
+});
+
+    </script>
+</body>
+</html>
